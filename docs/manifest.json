@@ -1,14 +1,14 @@
 {
   "name": "Vibrat",
   "short_name": "Vibrat",
-  "start_url": "/myjournal/",
-  "scope": "/myjournal/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/myjournal/favicon.svg",
+      "src": "/favicon.svg",
       "sizes": "512x512"
     }
   ]
