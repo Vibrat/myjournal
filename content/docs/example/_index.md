@@ -2,9 +2,13 @@
 weight: 1
 bookFlatSection: true
 title: "Example Site"
+images: ["/docs/hugo.png"]
+description: "Meta Content for first page"
 ---
 
 # Understand Machine Learning from theory to algorithms
+
+![Hugo Logo](/docs/hugo.png)
 
 **PAC**: Probability Approximately Correct, 
 
