@@ -3,4 +3,4 @@ languageCode = "en-us"
 title = "Vibrat"
 
 [params]
-  mathjax = "true"
+  katex = "true"

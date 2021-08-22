@@ -5,10 +5,7 @@ title: "Example Site"
 images: ["/docs/hugo.png"]
 description: "Meta Content for first page"
 ---
-
 # Understand Machine Learning from theory to algorithms
-
-![Hugo Logo](/docs/hugo.png)
 
 **PAC**: Probability Approximately Correct, 
 
@@ -156,7 +153,7 @@ Ref: https://nhigham.com/2020/09/15/what-is-a-householder-matrix/
 
 `householder` matrix is a $ n x n $ orthogonal matrix with the form:
 
-$ \mathcal{P} = \mathcal{I} - 2\frac{vv^{T}}{v^{T}v}, \quad v \neq 0, v \in R^{n} $
+$ \mathcal{P} = \mathcal{I} - 2\frac{vv^{T}}{v^{T}v}, v \neq 0, v \in R^{n} $
 
 We can see that:
 
@@ -188,5 +185,57 @@ Properties:
 In general, `norm` is measure to the magnitude of an entity (`vector`, `matrix`). They can have different formulas, but the constraint should be:
 
 * $ || \mathcal{A} > 0 || $ when $ \mathcal{A} \ne 0 $ and $ || \mathcal{A} = 0 || $ when $ \mathcal{A} = 0 $   $
+* $ || \mathcal{A} + \mathcal{B} || \leq || \mathcal{A} || + || \mathcal{B} || $
+
+`Vector` norm can be think as a measurement for length of vector, while `matrix` norm  is a measure for magnitude of its matrix to its eigencevector. 
+
+### Vector Norm
+
+There are multiple form for `vector` norm, there are just common forms:
+
+**definition**: Given  $ \vec{u} \in \mathcal{R}^n $, norm of vector $ \vec{u} $, denote $ || \vec{u} || $, is defined as 
+
+$ || \vec{u} ||_2 = \sqrt{\sum_{i=1}^n {u_i^2}} $
+
+**Example**: given a vector 
+$
+\vec{u} = 
+\begin{bmatrix} 
+0 & 2 
+\end{bmatrix}
+$
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+u = np.array([
+    [0, 0, 1, 2],
+    [0, 0, 1, 0],
+    [1, 0, 0, 2],
+])
+
+fig, ax = plt.subplots()
+
+ax.spines['left'].set_position(("data", 0))
+ax.spines['bottom'].set_position(("data", 0))
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+
+ax.quiver(u[:, 0], u[:, 1], u[:, 2], u[:, 3], angles='xy', scale_units='xy', scale=1, label="u")
+ax.text(0.2, 0.8, "u = (1, 2)", rotation=45)
+ax.text(1.1, 1, "(1, 2)")
+ax.text(0.3, -0.4, "(1, 0)")
+ax.axis([-0.5, 2, -1, 2.5])
+
+plt.show()
+```
+
+As shown in the above chart, we can calculate norm of vector $ \vec{u} $ using pythagone equation:
+
+$
+|| \vec{u} ||_2 = \sqrt{\sum_{i=1}^{n}{u_i^2}} = \sqrt{1^2 + 2^2} = \sqrt{5}
+$
 
 
