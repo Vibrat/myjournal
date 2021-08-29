@@ -8,7 +8,7 @@ type: docs
 
 Welcome, folks!
 
-I hope you'll find something interesting. 
+_I hope you'll find something interesting._ 
 
 Here is what i write about:
 
@@ -19,3 +19,10 @@ Here is what i write about:
 * And bunch of other interesting stuffs.
 
 All i just taught myself for years (along with professional working), so there are many parts left undone. Please feel free to hit me up  via `lamnguyen10@acm.org`
+
+```python
+import datetime
+
+
+datetime.datetime.now()
+```
