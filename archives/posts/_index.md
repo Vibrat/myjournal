@@ -1,7 +1,7 @@
 ---
 menu:
   after:
-    name: blog
+    name: Articles
     weight: 5
-title: Blog
+title: Articles
 ---

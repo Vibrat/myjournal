@@ -1,7 +1,7 @@
 ---
-menu: "math"
-title: Welcome
-type: docs
+title: Introduction
+type: doc
+weight: 1
 ---
 
 # Introduction

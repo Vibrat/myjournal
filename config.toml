@@ -1,6 +1,6 @@
 baseURL = "https://tuidoc.com"
 languageCode = "en-us"
-title = "Vibrat"
+title = "Lam Nguyen"
 
 [params]
   katex = "true"
