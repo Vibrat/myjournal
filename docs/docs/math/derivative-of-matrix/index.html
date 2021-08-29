@@ -2,23 +2,17 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Derivative of inverse and singular values #  Derivative of inverse #  Given matrix $ \mathcal{A(t)} $, how does it relate to $ \mathcal{ A^{-1}(t) } $, in detail:
- Given $ \frac{d(A)}{dt} $, find $ \frac{d(A^{-1})}{dt} $  Let start with,
-$ B^{-1} - A^{-1} = B^{-1}(A - B)A^{-1} $
-Which mean $ B^{-1} - A^{-1} $ and $ A - B $ has the same rank (because $ B^{-1}, A^{-1}, A, B $ is invertible (has full rank)).">
-<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="Derivative of inverse and singular values #  Derivative of inverse #  Given matrix $ \mathcal{A(t)} $, how does it relate to $ \mathcal{ A^{-1}(t) } $, in detail:
- Given $ \frac{d(A)}{dt} $, find $ \frac{d(A^{-1})}{dt} $  Let start with,
-$ B^{-1} - A^{-1} = B^{-1}(A - B)A^{-1} $
-Which mean $ B^{-1} - A^{-1} $ and $ A - B $ has the same rank (because $ B^{-1}, A^{-1}, A, B $ is invertible (has full rank)).">
+<meta name=description content="Finding derivatives of components of an invertible matrix, given the matrix is known">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Derivative of inverse, eigenvalues and singular values">
+<meta property="og:description" content="Finding derivatives of components of an invertible matrix, given the matrix is known">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://tuidoc.com/docs/math/derivative-of-matrix/"><meta property="article:section" content="docs">
-<title>Derivative of Matrix | Lam Nguyen</title>
+<meta property="og:url" content="https://tuidoc.com/docs/math/derivative-of-matrix/"><meta property="og:image" content="https://tuidoc.com/docs/math/derivative-inverse-eigenvalues-singular-values.png"><meta property="article:section" content="docs">
+<title>Derivative of inverse, eigenvalues and singular values | Lam Nguyen</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.b82ae8278f055c5534038f387fbaa30736d6a9ba303969aeb409c8d499ea9085.css integrity="sha256-uCroJ48FXFU0A484f7qjBzbWqbowOWmutAnI1JnqkIU=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.cd43ab6d925bd19a672636d0eec105dabae646d0b3da73fd20ea50a3d391364e.js integrity="sha256-zUOrbZJb0ZpnJjbQ7sEF2rrmRtCz2nP9IOpQo9ORNk4=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.1b6366dfea277b0956d6e4a67c837a5b5f6b027b4a9fa5f2a78e8d94fcea2c4a.js integrity="sha256-G2Nm3+onewlW1uSmfIN6W19rAntKn6Xyp46NlPzqLEo=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous></script>
@@ -53,7 +47,7 @@ Which mean $ B^{-1} - A^{-1} $ and $ A - B $ has the same rank (because $ B^{-1}
 </label>
 <ul>
 <li>
-<a href=https://tuidoc.com/docs/math/derivative-of-matrix/ class=active>Derivative of Matrix</a>
+<a href=https://tuidoc.com/docs/math/derivative-of-matrix/ class=active>Derivative of inverse, eigenvalues and singular values</a>
 </li>
 </ul>
 </li>
@@ -81,7 +75,7 @@ Which mean $ B^{-1} - A^{-1} $ and $ A - B $ has the same rank (because $ B^{-1}
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>Derivative of Matrix</strong>
+<strong>Derivative of inverse, eigenvalues and singular values</strong>
 <label for=toc-control>
 <img src=/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
@@ -89,44 +83,53 @@ Which mean $ B^{-1} - A^{-1} $ and $ A - B $ has the same rank (because $ B^{-1}
 <aside class="hidden clearfix">
 <nav id=TableOfContents>
 <ul>
-<li><a href=#derivative-of-inverse>Derivative of inverse</a></li>
+<li><a href=#introduction>Introduction</a></li>
+<li><a href=#finding-derivative-of-inverse-matrix>Finding derivative of inverse matrix</a></li>
 <li><a href=#derivative-of-eigenvalue--lambda->Derivative of eigenvalue $ \lambda $</a></li>
 <li><a href=#derivative-of--sigma->Derivative of $ \sigma $</a></li>
 </ul>
 </nav>
 </aside>
 </header>
-<article class=markdown><h1 id=derivative-of-inverse-and-singular-values>
-Derivative of inverse and singular values
-<a class=anchor href=#derivative-of-inverse-and-singular-values>#</a>
+<article class=markdown><h1 id=derivative-of-inverse-eigenvalues-and-singular-values>
+Derivative of inverse, eigenvalues and singular values
+<a class=anchor href=#derivative-of-inverse-eigenvalues-and-singular-values>#</a>
 </h1>
-<h2 id=derivative-of-inverse>
-Derivative of inverse
-<a class=anchor href=#derivative-of-inverse>#</a>
+<h2 id=introduction>
+Introduction
+<a class=anchor href=#introduction>#</a>
 </h2>
-<p>Given matrix $ \mathcal{A(t)} $, how does it relate to $ \mathcal{ A^{-1}(t) } $, in detail:</p>
+<p><strong>Question</strong>: Given an invertible matrix $ A $, how can we find derivatives of:</p>
 <ul>
-<li>Given $ \frac{d(A)}{dt} $, <code>find</code> $ \frac{d(A^{-1})}{dt} $</li>
+<li>$ A^{-1} $: which denotes inverse matrix of $ A $</li>
+<li>$ \lambda $: which denotes eigenvalues of $ A $</li>
+<li>$ \sigma $: which denote singular values of $ A $</li>
 </ul>
-<p>Let start with,</p>
+<p>Let&rsquo;s start to find the formula for each case.</p>
+<h2 id=finding-derivative-of-inverse-matrix>
+Finding derivative of inverse matrix
+<a class=anchor href=#finding-derivative-of-inverse-matrix>#</a>
+</h2>
+<p><strong>Problem</strong>: Given matrix $ A $ subjected to variable $ t $: $ \frac{dA}{dt} $, finding $ \frac{A^{-1}}{dt} $</p>
+<p>With two invertible matrices $ A, B $, we have</p>
 <p>$
 B^{-1} - A^{-1} = B^{-1}(A - B)A^{-1}
 $</p>
-<p>Which mean $ B^{-1} - A^{-1} $ and $ A - B $ has the same rank (because $ B^{-1}, A^{-1}, A, B $ is invertible (has full rank)). Pick $ B = A + \nabla A $, we have</p>
+<p>We can pick any abitrary invertible matrix $ B $. Let takes $ B = A + \nabla A $ and place in the above formula, we have:</p>
 <p>$$
-\begin{align}
-& (A + \nabla A)^{-1} - A = (A + \nabla A)^{-1}(A - B)A^{-1} \newline
+\begin{align*}
+& (A + \nabla A)^{-1} - A^{-1} = (A + \nabla A)^{-1}(A - B)A^{-1} \newline
 \leftrightarrow \quad & \frac{\nabla A^{-1}}{\nabla t} = -(A + \nabla A)^{-1}(\frac{\nabla A}{\nabla t})A^{-1}
-\end{align}
+\end{align*}
 $$</p>
 <p>And as $ \nabla t \to 0 $, we have:</p>
-<p>$
-\begin{align}
-& \lim_{\nabla t \to 0 \leftrightarrow \nabla A \to 0 } \frac{\nabla A^{-1}}{\nabla t} = \lim_{\nabla t \to 0 \leftrightarrow \nabla A \to 0 } - (A + \nabla A)^{-1}(\frac{\nabla A}{\nabla t})A^{-1} \<br>
+<p>$$
+\begin{align*}
+& \lim_{\nabla t \to 0 \leftrightarrow \nabla A \to 0 } \frac{\nabla A^{-1}}{\nabla t} = \lim_{\nabla t \to 0 \leftrightarrow \nabla A \to 0 } - (A + \nabla A)^{-1}(\frac{\nabla A}{\nabla t})A^{-1} \newline
 \leftrightarrow \quad & \lim_{\nabla t \to 0 \leftrightarrow \nabla A \to 0 } \frac{\nabla A^{-1}}{\nabla t} = \lim_{\nabla t \to 0} - (A)^{-1}(\frac{\nabla A}{\nabla t})A^{-1}
-\end{align}
-$</p>
-<p>This is equivalent to definition of <code>derivative</code>:</p>
+\end{align*}
+$$</p>
+<p>This is equivalent to definition of <code>derivative</code> of matrix $ A^{-1} $. So the final answer is:</p>
 <p>$$
 \frac{d A^{-1}}{dt} = - A^{-1}\frac{dA}{dt}A^{-1}
 $$</p>
@@ -134,7 +137,8 @@ $$</p>
 Derivative of eigenvalue $ \lambda $
 <a class=anchor href=#derivative-of-eigenvalue--lambda->#</a>
 </h2>
-<p>Given eigenvector $ x(t) $ and eigenvalue $ \lambda (t) $:</p>
+<p><strong>Problem</strong>: Given matrix $ A $ subjected to variable $ t $, find $ \frac{d \lambda }{dt} $, where $ \lambda $ is eigenvalue of matrix $ A $.</p>
+<p>Recalling there are two type of eigenvectors: <code>left</code> and <code>right</code>. The below table shows formula on relationship between eigenvalue $ \lambda $, eigenvector $ x $ and the original matrix $ A $</p>
 <table>
 <thead>
 <tr>
@@ -152,37 +156,64 @@ Derivative of eigenvalue $ \lambda $
 <tr>
 <td>matrix</td>
 <td>$ Y^TA = \Lambda Y^T $</td>
-<td>$ AX = X\Lambda $</td>
+<td>$ AX = X \Lambda $</td>
 </tr>
 </tbody>
 </table>
-<p>Also $ \mathcal{ Y^TX = I } $, using those formula with a function of $ t $ we have:</p>
+<p>And: $ Y^TX = I $</p>
+<p>Using those formula with a function of $ t $, we have:</p>
 <p>$$
-\begin{align}
+\begin{align*}
 & y^T(t) A(t) x(t) = \lambda (t) y^T(t) x(t) \newline
 \leftrightarrow \quad & \lambda (t) = y^T(t) A(t) x(t)
-\end{align}
+\end{align*}
 $$</p>
-<p>So calulate <code>derivative</code>:</p>
+<p>So calulate <code>derivative</code>, with note that $ y^T(t)x(t) = I $</p>
 <p>$$
-\begin{align}
+\begin{align*}
 \frac{d \lambda}{dt}
 & = \frac{d y^T}{dt} A x(t) + y^T(t) \frac{d A} {dt} x(t) + y^T(t) A(t) \frac{d x}{dt} \newline
 & = (\frac{d y^T}{dt} A x(t) + y^T(t) A(t) \frac{d x}{dt} ) + y^T(t) \frac{d A} {dt} x(t) \newline
 & = \lambda (t) (\frac{d y^T}{dt} x(t) + y^T(t)\frac{d x}{dt}) + y^T(t) \frac{d A} {dt} x(t) \newline
 & = 0 + y^T(t) \frac{d A} {dt} x(t) \newline
 & = y^T(t) \frac{d A} {dt} x(t) \newline
-\end{align}
+\end{align*}
+$$</p>
+<p>So the final answer is:</p>
+<p>$$
+\frac{d \lambda}{dt} = y^T(t)\frac{dA}{dt}x(t)
 $$</p>
 <h2 id=derivative-of--sigma->
 Derivative of $ \sigma $
 <a class=anchor href=#derivative-of--sigma->#</a>
 </h2>
-<p>$
-\mathcal{
-\frac{d(\sigma)}{d(t)} =
-}
-$</p>
+<p><strong>Problem</strong>: Given matrix $ A $ subjected to variable $ t $, finding $ \frac{d(\sigma)}{d(t)} $, which denotes singular values of matrix $ A $.</p>
+<p>Recall that $ A $ can be written as SVD form as $ A = U^T \Sigma V $, where $ U^T $, $ V $ are orthogonal matrices, and $ \Sigma $ is symmetric matrix which contains singular values in diagonal line.</p>
+<p>$$
+\begin{align*}
+A = U \Sigma V^T \leftrightarrow \Sigma = U^TAV
+\end{align*}
+$$</p>
+<p>With a any $ \sigma $ in $ \Sigma $, we have:</p>
+<p>$$
+\begin{align*}
+\frac{d \sigma}{dt} & = \frac{d(u^TAv)}{dt} \newline
+& = \frac{du^T}{dt}Av + u^T\frac{dA}{dt}v + u^TA\frac{dv}{dt} \newline
+& = \frac{du^T}{df}u\sigma + u^T\frac{dA}{dt}v + \sigma v^T\frac{dv}{dt}
+\end{align*}
+$$</p>
+<p>Recall that $ u^Tu = 0 $ and $ v^Tv = 0 $ since $ u, v $ are <code>orthogonal</code>. Therefore:</p>
+<p>$$
+\begin{align*}
+\frac{d \sigma}{dt} & = \frac{du^T}{df}u\sigma + u^T\frac{dA}{dt}v + \sigma v^T\frac{dv}{dt} \newline
+& = 0 + u^T\frac{dA}{dt}v + 0 \newline
+& = u^T\frac{dA}{dt}v
+\end{align*}
+$$</p>
+<p>So the final answer is:</p>
+<p>$$
+\frac{d \sigma}{dt} = u^T\frac{dA}{dt}v
+$$</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -197,7 +228,8 @@ $</p>
 <div class=book-toc-content>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#derivative-of-inverse>Derivative of inverse</a></li>
+<li><a href=#introduction>Introduction</a></li>
+<li><a href=#finding-derivative-of-inverse-matrix>Finding derivative of inverse matrix</a></li>
 <li><a href=#derivative-of-eigenvalue--lambda->Derivative of eigenvalue $ \lambda $</a></li>
 <li><a href=#derivative-of--sigma->Derivative of $ \sigma $</a></li>
 </ul>

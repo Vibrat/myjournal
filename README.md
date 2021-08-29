@@ -11,3 +11,7 @@ title: "Example Site"
 images: ["/docs/hugo.png"]
 description: "Meta Content for first page"
 ```
+
+## Meta
+
+Facebook post share image: 600 x 315
