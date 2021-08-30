@@ -14,4 +14,4 @@ description: "Meta Content for first page"
 
 ## Meta
 
-Facebook post share image: 600 x 315
+Facebook post share image: 1200 x 630 with min 600 x 315 in `px`
