@@ -201,8 +201,8 @@ $$
 1 & 3
 \end{bmatrix} = 
 \begin{bmatrix}
-1*3 + 2*5 + 3*1 & 1*2 + 2*4 + 3*3 \newline
-4*3 + 5*5 + 6*1 & 4*2 + 5*4 + 6x3 
+1\*3 + 2\*5 + 3\*1 & 1\*2 + 2\*4 + 3\*3 \newline
+4\*3 + 5\*5 + 6\*1 & 4\*2 + 5\*4 + 6\*3 
 \end{bmatrix} = 
 \begin{bmatrix}
 16 & 19 \newline
