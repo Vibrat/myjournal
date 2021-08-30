@@ -150,7 +150,7 @@ My experience with `numpy` was really confusing on how to map normal matrix mult
 * In two dimensional array, both `@` and `.dot` perform the same operation which is normal matrix multiplication.
 * In higher dimensional array ($ n >= 3 $), they perform slightly different:
     * For `@`, it is treated as a stack of matrices residing in the last two indices and broadcast accordingly.
-    * For `.dot`, it is a sum product over the last axis of a and the second-to-last of b.
+    * For `.dot`, it is a sum product over the last axis of the first matrix and the second-to-last of the second matrix.
 
 Let first take an example of 2 dimensional array to see they generate the same result as matrix multiplication
 
@@ -201,8 +201,8 @@ $$
 1 & 3
 \end{bmatrix} = 
 \begin{bmatrix}
-1x3 + 2x5 + 3x1 & 1x2 + 2x4 + 3x3 \newline
-4x3 + 5x5 + 6x1 & 4x2 + 5x4 + 6x3 
+1*3 + 2*5 + 3*1 & 1*2 + 2*4 + 3*3 \newline
+4*3 + 5*5 + 6*1 & 4*2 + 5*4 + 6x3 
 \end{bmatrix} = 
 \begin{bmatrix}
 16 & 19 \newline
