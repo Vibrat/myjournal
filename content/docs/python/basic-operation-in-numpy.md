@@ -8,14 +8,14 @@ description: "Getting to know basic opreation in numpy and how to map it with co
 
 ## Introduction
 
-`numpy` is a great tool for performing matrix multiplication. Ever since changing from doing math on handwriting to using `python`, you often experience trouble finding how to different matrix/ arrat operation on numpy, and how to map it to mathematics. This turorial helps to:
+`numpy` is a great tool for performing matrix multiplication. Ever since changing from doing math on handwriting to using `python`, you often experience troubles finding the differences between matrix operations on numpy, and also how to map it to mathematic formula. This turorial helps to:
 
 * Guide you over basic on how `numpy` array works.
 * Understand three different operation of matrix operation in `numpy`: **element-wise**,**matrix product**, and **dot product**
 
 ## How numpy array works
 
-In a general terms, `numpy` array can be interpreted as multidimensional array which all elements having the same data type. This seems not pretty much different compared to normal `python` array, but the reason behind is that `numpy` array is built on the purpose of efficient operation (loop, matrix operation, slicing, ...) which is better than `python` array in some cases, and `numpy` has a great support for `linear algebra`, `statistic` operations which is suitable for data science jobs.
+In a general terms, `numpy` array can be interpreted as multidimensional array which all elements having the same data type. This seems not pretty much different compared to normal `python` array, but the reason behind is that `numpy` array is built on the purpose of efficient operation (loop, matrix operation, slicing, ...) which is better than `python` array in some cases, and `numpy` also has a great support for `linear algebra`, `statistic` operations which is suitable for data science jobs.
 
 Let first compare performace of `python` and `numpy` array over a sum of looping 10000 items.
 
@@ -49,39 +49,38 @@ Now, let's also check another case where we should use `python` array instead:
 ```python
 %%timeit
 
-def run_array(l):
-    response = 1
-    for i in py_array:
-        response *= i
+def run_array():
+    response = []
+    for i in range(100000):
+        response.append(i)
     return response
 
-py_array = range(1, 10001, 1)
-res = run_array(py_array)
+run_array()
 ```
 
-    20 ms ± 555 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+    8.58 ms ± 477 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 
 
 
 ```python
 %%timeit
+
 import numpy as np
 
 # perf: numpy array
-def run_array(l):
-    response = 1
-    for i in py_array:
-        response *= i
+def run_array():
+    response = np.empty((1, 0), int)
+    for i in range(100000):
+        response = np.append(response, np.array(i))      
     return response
 
-np_array = np.arange(1, 10001, 1)
-res = run_array(np_array)
+run_array()
 ```
 
-    395 µs ± 2.99 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+    2 s ± 106 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
 
 
-As you can see, the performance over a trivial case which loops over each item is better in `python` array. In fact, when using `numpy` array you will also have to retain a fixed array of data type, while in `python` array you can store values of multiple data types (`int`, `float`, ...). In general:
+As you can see, the performance over the above trivial case is better in `python` array. Besides, when using `numpy` array you will also have to retain a fixed array of data type, while in `python` array you can store values of multiple data types (`int`, `float`, ...). In general:
 
 * Using `numpy` array when you can vectorize your computation.
 * Using `python` array when you have trivial tasks, check some condition, append some value, ...
