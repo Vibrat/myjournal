@@ -9,47 +9,48 @@ weight: 1
 - **Description**: Software engineer, Data Pipeline Developmnent
 - **Years of Exp**: 5+
 - **Programming Languages**: `python`, `javascript`, `C` 
-- **Education**: Foreign Trade University, major in International Economics Busines
+- **Education**: Foreign Trade University, major in International Economics Business
 - **Location**: Hochiminh City, Vietnam
 - **Github**: [Vibrat](https://github.com/Vibrat)
 - **Linkedin**: [Lam Nguyen](https://www.linkedin.com/in/lam-nguyen-account/)
+- **Download my resume**: [Download](/docs/resume/3dc7d8ff-ab77-49f6-8c2c-72d9bbf621d3_Lam_Nguyen.pdf)
 
-Experience on various stacks of development (data pipeline, backend, frontend, ...). He’s currently taking a role as data pipeline engineer to tackle big data explorations by building and maintaining high performance system.
+Lam Nguyen has experience working with various development stacks, including data pipeline, backend, and frontend. Currently, he is working as a data pipeline engineer, utilizing his skills to explore big data by building and maintaining high-performance systems.
 
 ## Technical Skills
 
-- **Programming languages**: `Python`, `C`, `Javascript` / `Typescript`, `SQL`, `Bash`
-- **Technology/ frameworks**: `K8s`, `Docker`, `Rpm`, `Linux (Centos 7)`, `Jenkins`
+- **Programming Languages**: `Python`, `C`, `Javascript` / `Typescript`, `SQL`, `Bash`
+- **Technology/Frameworks**: `K8s`, `Docker`, `Rpm`, `Linux (Centos 7)`, `Jenkins`
 
-**Disclaimer**: These technical stacks that i have acquired during works experience. Depends on current work situation, i might forget some of these parts.
+**Disclaimer**: I have acquired these technical skills during work experience. Depending on my current work situation, I may forget some of these technologies.
 
 ## Work Experience
 
 ### **Software Engineer, Data Pipeline Development** 
 _at **Niometrics/ Mobileum** from Dec 2020 to Current_
 
-Develop and maintain data pipeline for the company's `OLAP distributed system`, focusing on batching jobs of the whole system. 
+I have acquired these technical skills during work experience. Depending on my current work situation, I may forget some of these technologies.
 
 ### **Fullstack Web Developer**
 _at **Oursky** from Oct 2019 to Nov 2020_
 
-Using `Python`, `K8s`, `Docker`, `Javascript` to build application based on client's requests. Mostly `mono`(`all-in-one`) application that falicitates `easy to setup`, `cost-effective`.
+Using Python, K8s, Docker, and Javascript, I built applications based on client requests, mostly with mono (all-in-one) applications that facilitates easy to setup and cost-effectiveness.
 
 ### **Software Engineer**
 _at **Onsolve** from Oct 2018 to Sep 2019_
 
-Maintain and build features on `mass notification` (`sms`, `email`, `phone call`, ...) using `Python`, `PHP`, `Javascript`, ...
+I maintained and built features on the mass notification system (SMS, email, phone calls, etc.) using Python, PHP, and Javascript.
 
 #### **Bancasurance Sale Managers**
 _at **Prudential Vietnam** from August 2016 to Dec 2017_
 
-- Work with clients (banking) and sales team to hit targets every month.
-- Organize internal training/ workshops.
-- Set KPIs for internal sale team.
-
+- I worked with clients (banking) and the sales team to hit targets every month.
+- I organized internal training and workshops.
+- I set KPIs for the internal sales team.
+  
 ## Philosophy for work
 
-My work's journey has been through multiple different jobs/ functions which does not seem to be related up til now. Some might say i don't have experty for anything. They're right, i just chose a different path and define my experty as `having no experty`. You may hire me for my flexibility on making thing happen.
+My work journey has gone through multiple different jobs/functions that did not seem to be related up until now. Some might say I don't have expertise in anything. They're right; I just chose a different path and define my expertise as "having no expertise." You may hire me for my flexibility in making things happen.
 
 ## Contact
 
