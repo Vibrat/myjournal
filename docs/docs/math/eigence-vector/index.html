@@ -1,0 +1,68 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Eigencevectors and eigencevalues. # Definition # A vector $ \vec{v} $ is said to be an eigencevector of $ A $, if $ A\vec{v} = k\vec{v} $, where $ k $ is constant.
+Given matrix
+$$ A = \begin{bmatrix} -6 & 3 \newline 4 & 5 \end{bmatrix} $$
+will have eigenvector $ \vec{v} = \begin{bmatrix} 1 \newline 4 \end{bmatrix} $ because
+$$ \begin{align*} A\vec{v} & = \begin{bmatrix} -6 & 3 \newline 4 & 5 \end{bmatrix} \begin{bmatrix} 1 & 4 \end{bmatrix} \newline & = \begin{bmatrix} 6 \newline 24 \end{bmatrix} \newline & = 6 \begin{bmatrix} 1 \newline 4 \end{bmatrix} = 6 \vec{v} \end{align*} $$"><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Eigencevectors and eigencevalues. # Definition # A vector $ \vec{v} $ is said to be an eigencevector of $ A $, if $ A\vec{v} = k\vec{v} $, where $ k $ is constant.
+Given matrix
+$$ A = \begin{bmatrix} -6 & 3 \newline 4 & 5 \end{bmatrix} $$
+will have eigenvector $ \vec{v} = \begin{bmatrix} 1 \newline 4 \end{bmatrix} $ because
+$$ \begin{align*} A\vec{v} & = \begin{bmatrix} -6 & 3 \newline 4 & 5 \end{bmatrix} \begin{bmatrix} 1 & 4 \end{bmatrix} \newline & = \begin{bmatrix} 6 \newline 24 \end{bmatrix} \newline & = 6 \begin{bmatrix} 1 \newline 4 \end{bmatrix} = 6 \vec{v} \end{align*} $$"><meta property="og:type" content="article"><meta property="og:url" content="https://tuidoc.com/docs/math/eigence-vector/"><meta property="article:section" content="docs"><title>Eigence Vector | Lam Nguyen</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.b82ae8278f055c5534038f387fbaa30736d6a9ba303969aeb409c8d499ea9085.css integrity="sha256-uCroJ48FXFU0A484f7qjBzbWqbowOWmutAnI1JnqkIU=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/en.search.min.6248f0d4778be3a7f06cb3a79412a91077b31b0fd8bc3ea06e6436002692323d.js integrity="sha256-Ykjw1HeL46fwbLOnlBKpEHezGw/YvD6gbmQ2ACaSMj0=" crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-XVV4MZW52B","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css integrity=sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js integrity=sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8 crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js integrity=sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl crossorigin=anonymous></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"\\begin{alignat}",right:"\\end{alignat}",display:!0},{left:"\\begin{gather}",right:"\\end{gather}",display:!0},{left:"\\begin{CD}",right:"\\end{CD}",display:!0}],throwOnError:!1})})</script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/><span>Lam Nguyen</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://tuidoc.com/docs/introduction/>About me</a><ul></ul></li><li><a href=https://tuidoc.com/docs/resume/>My resume</a><ul></ul></li><li class=book-section-flat><input type=checkbox id=section-426c24f586a1a31f40b6adbe7793c4e5 class=toggle checked>
+<label for=section-426c24f586a1a31f40b6adbe7793c4e5 class="flex justify-between"><a href=https://tuidoc.com/docs/math/>Math</a></label><ul><li><a href=https://tuidoc.com/docs/math/eigence-vector/ class=active>Eigence Vector</a></li><li><a href=https://tuidoc.com/docs/math/derivative-of-matrix/>Derivative of inverse, eigenvalues and singular values</a></li></ul></li><li class=book-section-flat><input type=checkbox id=section-dbec22d72f9c0b4ccf9d173e77fe928c class=toggle>
+<label for=section-dbec22d72f9c0b4ccf9d173e77fe928c class="flex justify-between"><a href=https://tuidoc.com/docs/python/>Python</a></label><ul><li><a href=https://tuidoc.com/docs/python/basic-operation-in-numpy/>Basic matrix operation in numpy</a></li></ul></li><li><a href=https://tuidoc.com/docs/contact/>Contact</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Eigence Vector</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#definition>Definition</a></li><li><a href=#intuition>Intuition</a></li><li><a href=#calculate-eigenvectors>Calculate eigenvectors</a><ul><li><a href=#using-sympy>Using <code>sympy</code></a></li><li><a href=#using-math>Using math</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=eigencevectors-and-eigencevalues>Eigencevectors and eigencevalues.
+<a class=anchor href=#eigencevectors-and-eigencevalues>#</a></h1><h2 id=definition>Definition
+<a class=anchor href=#definition>#</a></h2><p>A vector $ \vec{v} $ is said to be an eigencevector of $ A $, if $ A\vec{v} = k\vec{v} $, where $ k $ is constant.</p><p>Given matrix</p><p>$$
+A = \begin{bmatrix}
+-6 & 3 \newline
+4 & 5
+\end{bmatrix}
+$$</p><p>will have eigenvector $ \vec{v} = \begin{bmatrix} 1 \newline 4 \end{bmatrix} $ because</p><p>$$
+\begin{align*}
+A\vec{v} & = \begin{bmatrix} -6 & 3 \newline 4 & 5 \end{bmatrix} \begin{bmatrix} 1 & 4 \end{bmatrix} \newline
+& = \begin{bmatrix} 6 \newline 24 \end{bmatrix} \newline
+& = 6 \begin{bmatrix} 1 \newline 4 \end{bmatrix} = 6 \vec{v}
+\end{align*}
+$$</p><p>Here <code>6</code> is the eigenvalue and $ \begin{bmatrix} 1 \newline 4 \end{bmatrix} $ is the eigencevector.</p><h2 id=intuition>Intuition
+<a class=anchor href=#intuition>#</a></h2><p>Given <code>2 by 2</code> matrix, there will be a maximum of 2 eigenvectors. From the example above, we will also have $ \begin{bmatrix} -3 \newline 1 \end{bmatrix} $ as the second one.</p><p><strong>Note</strong>: Some matrix has orthogonal eigenvectors, some does not have it.</p><p>Eigenvectors can be thought of basis axes (instead of $ \begin{bmatrix} 1 \newline 0 \end{bmatrix} $ and $ \begin{bmatrix} 0 \newline 1 \end{bmatrix} $) of a given matrix, in which each basis contains its own meaning of the matrix such that later it can be further analysis.</p><h2 id=calculate-eigenvectors>Calculate eigenvectors
+<a class=anchor href=#calculate-eigenvectors>#</a></h2><h3 id=using-sympy>Using <code>sympy</code>
+<a class=anchor href=#using-sympy>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>from</span> sympy <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>A <span style=color:#f92672>=</span> Matrix([
+</span></span><span style=display:flex><span>    [<span style=color:#f92672>-</span><span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>3</span>],
+</span></span><span style=display:flex><span>    [<span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>]
+</span></span><span style=display:flex><span>])
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>EigenPairs <span style=color:#f92672>=</span> A<span style=color:#f92672>.</span>eigenvects()
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>[(eigenvalue, algebraic_multiplication, eigenvectors), ...]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;&#34;</span>
+</span></span></code></pre></div><h3 id=using-math>Using math
+<a class=anchor href=#using-math>#</a></h3><p>From definition,</p><p>$$
+\begin{align*}
+& A\vec{v} = \lambda\vec{v} \leftrightarrow (A - \lambda I)\vec{v} = \vec{0} \newline
+\leftrightarrow & \begin{vmatrix} A - \lambda I \end{vmatrix} = 0 \newline
+\leftrightarrow & \begin{vmatrix} -6 - \lambda & 3 \newline 4 & 5 - \lambda \end{vmatrix} = 0 \newline
+\leftrightarrow & (\lambda + 6)(\lambda - 5) - 12 = 0 \newline
+\leftrightarrow & \begin{cases} \lambda = 6 \newline \lambda = -7 \end{cases}
+\end{align*}
+$$</p><ul><li>When $ \lambda = 6 $, substitute it to $ (A - \lambda I) \vec{v} = 0 $</li></ul><p>$$
+\begin{align*}
+& (\begin{bmatrix}
+-6 & 3 \newline 4 & 5
+\end{bmatrix} - \begin{bmatrix} 6 & 0 \newline 0 & 6 \end{bmatrix}) \begin{bmatrix} v_1 \newline v_2 \end{bmatrix} = 0 \newline
+\leftrightarrow & \begin{bmatrix} -12 & 3 \newline 4 & -1 \end{bmatrix} \begin{bmatrix} v_1 \newline v_2 \end{bmatrix} = 0 \newline
+\leftrightarrow & \begin{cases} v_1 = 1 \newline v_2 = 4 \end{cases}
+\end{align*}
+$$</p><ul><li>Similarly, when $ \lambda = -7 $, substitute it to $ (A - \lambda I) \vec{v} = 0 $ and we will have the solution as:</li></ul><p>$$
+\begin{cases}
+v_1 = -3 \newline
+v_2 = 1
+\end{cases}
+$$</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#definition>Definition</a></li><li><a href=#intuition>Intuition</a></li><li><a href=#calculate-eigenvectors>Calculate eigenvectors</a><ul><li><a href=#using-sympy>Using <code>sympy</code></a></li><li><a href=#using-math>Using math</a></li></ul></li></ul></nav></div></aside></main></body></html>
