@@ -1,0 +1,13 @@
+{{ $data := .Get "data" }}
+{{ $id := .Get "id"}}
+{{ $height := .Get "height" | default "auto" }}
+{{ $width := .Get "width" | default "auto" }}
+<div id="{{$id}}" class="plotly" style="height:{{$height}}; width: {{$width}};"></div>
+<script>
+    fetch({{$data}})
+        .then((resp) => resp.json())
+        .then((data) => {
+            Plotly.newPlot( {{$id}}, data, {heigh: {{$height}}});  
+        }
+    );
+</script>

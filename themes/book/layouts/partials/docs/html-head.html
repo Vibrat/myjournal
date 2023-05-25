@@ -50,3 +50,7 @@ https://github.com/alex-shpak/hugo-book
 {{- end -}}
 
 {{ if .Site.Params.katex }}{{ partial "katex_support.html" . }}{{ end }}
+
+{{ if .Site.Params.plotly }}
+  <script src="https://cdn.plot.ly/plotly-2.20.0.min.js" charset="utf-8"></script>
+{{ end }}
