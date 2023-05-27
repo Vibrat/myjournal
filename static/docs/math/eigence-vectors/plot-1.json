@@ -1,8 +1,9 @@
 [
     {
-        "values": [19, 26, 55],
-        "labels": ["Residential", "Non-Residential", "Utility"], 
-        "type": "pie",
+        "x": [19, 26, 55],
+        "y": [19, 26, 55],
+        "type": "scatter",
+        "mode": "markers",
         "automargin": true
     }
 ]

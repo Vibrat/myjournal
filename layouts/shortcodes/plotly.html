@@ -7,7 +7,7 @@
     fetch({{$data}})
         .then((resp) => resp.json())
         .then((data) => {
-            Plotly.newPlot( {{$id}}, data, {heigh: {{$height}}});  
+            Plotly.newPlot( {{$id}}, data, {});  
         }
     );
 </script>

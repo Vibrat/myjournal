@@ -33,7 +33,7 @@ Given `2 by 2` matrix, there will be a maximum of 2 eigenvectors. From the examp
 
 Eigenvectors can be thought of basis axes (instead of $ \begin{bmatrix} 1 \newline 0 \end{bmatrix} $ and $ \begin{bmatrix} 0 \newline 1 \end{bmatrix} $) of a given matrix, in which each basis contains its own meaning of  the matrix such that later it can be further analysis.
 
-{{< plotly id="chart-1" data="/docs/math/eigence-vectors/plot-1.json">}}
+<!-- {{< plotly id="chart-1" data="/docs/math/eigence-vectors/plot-1.json">}} -->
 
 ## Calculate eigenvectors
 
