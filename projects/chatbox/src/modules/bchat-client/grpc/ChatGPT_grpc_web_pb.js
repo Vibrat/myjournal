@@ -33,7 +33,7 @@ proto.chatprotocol = require('./ChatGPT_pb.js');
 proto.chatprotocol.ChatProtocolClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options.format = 'text';
+  options.format = 'binary';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -59,7 +59,7 @@ proto.chatprotocol.ChatProtocolClient =
 proto.chatprotocol.ChatProtocolPromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options.format = 'text';
+  options.format = 'binary';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
