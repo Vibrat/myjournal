@@ -69,6 +69,3 @@ vocabularies = [1, 2, 3]
 one_hot_decoder(label, vocabularies=vocabularies)
 """Return 2"""
 ```
-
-
-
